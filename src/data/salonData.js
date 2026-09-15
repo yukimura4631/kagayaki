@@ -40,13 +40,14 @@ const salonData = {
     addressLine1: '千葉県船橋市前貝塚565-11',
     addressLine2: '塚田プラザ103号（旧 井丸跡地）',
     phone: '080-6522-5488',
-    payment: '現金のみ',
+    payment: '現金/各種カード決済',
     note: '予約優先',
-    hours: '10:00〜19:00',
-    closed: '不定休',
+    hours: '10:00〜18:00',
+    closed: '毎週水曜日',
   },
   reservation: {
     link: '#contact',
+    lineUrl: 'https://line.me/R/ti/p/@751loeky',
     phone: '080-6522-5488',
   },
 };

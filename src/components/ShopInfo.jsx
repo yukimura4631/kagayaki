@@ -25,7 +25,10 @@ export default function ShopInfo({ shop }) {
           <p>{shop.payment}</p>
         </div>
       </div>
+      <div className="shop-info__access">
       <a className="shop-info__map-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(shop.addressLine1 + " " + shop.addressLine2)}`} target="_blank" rel="noreferrer">Google マップで場所を確認する ↗</a>
+        <p className="shop-info__parking">お車の方は電話にてご相談下さい。</p>
+      </div>
       <p className="shop-info__note">{shop.note}</p>
     </section>
   );
