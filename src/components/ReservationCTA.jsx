@@ -7,12 +7,12 @@ export default function ReservationCTA({ reservation }) {
         <div className="reservation-cta__copy">
           <p className="section__eyebrow">RESERVATION</p>
           <h2 className="reservation-cta__text">あなたのペースで、肌のお手入れを。</h2>
-          <p className="reservation-cta__description">ご予約やお肌のご相談は、公式LINE・お電話からお気軽に。</p>
+          <p className="reservation-cta__description">ご予約やお肌のご相談は、公式LINEからお気軽に。</p>
         </div>
         <div className="reservation-cta__actions">
           <a className="button button--line" href={reservation.lineUrl} target="_blank" rel="noopener noreferrer">公式LINEで相談・予約 ↗</a>
           <p className="reservation-cta__note">友だち追加後、メッセージをお送りください。</p>
-          <a className="reservation-cta__phone" href={`tel:${reservation.phone}`}>お電話：{reservation.phone}</a>
+          {/* <a className="reservation-cta__phone" href={`tel:${reservation.phone}`}>お電話：{reservation.phone}</a> */}
         </div>
       </div>
       <div className="reservation-cta__line-guide">
