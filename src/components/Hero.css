@@ -1,0 +1,94 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: radial-gradient(circle at top right, rgba(217, 178, 99, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #fdf6eb 100%);
+  padding: 26px 22px 32px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 26px;
+}
+
+.hero__visual {
+  position: relative;
+  min-height: 320px;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720"%3E%3Cdefs%3E%3ClinearGradient id="a" x1="0" x2="1" y1="0" y2="1"%3E%3Cstop offset="0%25" stop-color="%23f7f3ed"/%3E%3Cstop offset="100%25" stop-color="%23f0e4d7"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="720" height="720" fill="url(%23a)"/%3E%3Ccircle cx="540" cy="180" r="98" fill="%23f3e1b3" opacity="0.65"/%3E%3Cellipse cx="290" cy="400" rx="198" ry="230" fill="%23fff" opacity="0.65"/%3E%3Cpath d="M220 160c50 26 88 58 107 95 21 43 19 99 13 150-14 106-58 178-128 185-70 7-113-43-99-150 8-63 50-128 107-180z" fill="%23e9dcb1" opacity="0.6"/%3E%3Cpath d="M370 470c82-25 156-78 172-142 14-58-16-115-78-137-71-25-153 12-186 86-36 79 2 176 92 193z" fill="%23f5e4b7" opacity="0.55"/%3E%3C/svg%3E');
+  background-size: cover;
+  background-position: center;
+  animation: zoomSlow 18s ease-in-out infinite alternate;
+}
+
+.hero__layer {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__layer--sun {
+  background: radial-gradient(circle at 20% 15%, rgba(217, 178, 99, 0.26), transparent 26%);
+}
+
+.hero__layer--petals {
+  background-image: radial-gradient(circle at 85% 60%, rgba(217, 178, 99, 0.18), transparent 20%),
+    radial-gradient(circle at 15% 75%, rgba(217, 178, 99, 0.18), transparent 20%);
+}
+
+.hero__content {
+  max-width: 520px;
+}
+
+.hero__eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  color: var(--accent-strong);
+}
+
+.hero__title {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.hero__text {
+  margin: 0 0 24px;
+  color: var(--text-muted);
+  max-width: 42rem;
+}
+
+.hero__actions {
+  display: grid;
+  gap: 12px;
+}
+
+.hero__price {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+@keyframes zoomSlow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.03);
+  }
+}
+
+@media (min-width: 840px) {
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+
+  .hero__visual {
+    min-height: 420px;
+  }
+}

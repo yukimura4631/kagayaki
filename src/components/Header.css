@@ -1,0 +1,128 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 250, 241, 0.92);
+  border-bottom: 1px solid rgba(44, 58, 80, 0.08);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  background: rgba(217, 178, 99, 0.14);
+  color: var(--accent-strong);
+  font-size: 1.05rem;
+}
+
+.header__label {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nav);
+}
+
+.header__name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.header__menu {
+  border: none;
+  background: transparent;
+  padding: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.header__menu span {
+  width: 22px;
+  height: 2px;
+  background: var(--nav);
+  border-radius: 999px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.header__menu.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.header__menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.header__nav {
+  display: grid;
+  gap: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.header__nav--open {
+  max-height: 340px;
+}
+
+.header__link {
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(44, 58, 80, 0.06);
+  color: var(--text);
+}
+
+.header__link.active {
+  background: rgba(217, 178, 99, 0.15);
+  color: var(--nav);
+}
+
+@media (min-width: 800px) {
+  .header__inner {
+    padding: 24px 0;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__nav {
+    grid-auto-flow: column;
+    max-height: none;
+    overflow: visible;
+    justify-content: flex-end;
+  }
+
+  .header__link {
+    width: auto;
+    background: transparent;
+    border: none;
+    padding: 0 10px;
+    color: var(--nav);
+  }
+}

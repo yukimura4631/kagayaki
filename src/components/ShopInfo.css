@@ -1,0 +1,39 @@
+.shop-info__grid {
+  display: grid;
+  gap: 18px;
+}
+
+.shop-info__label {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: var(--nav);
+}
+
+.shop-info__map {
+  margin-top: 18px;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 180px;
+  background: linear-gradient(180deg, #fff9f0 0%, #f9f3e5 100%);
+  border: 1px solid rgba(44, 58, 80, 0.08);
+}
+
+.shop-info__mapPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.shop-info__note {
+  margin-top: 16px;
+  color: var(--text-muted);
+}
+
+@media (min-width: 900px) {
+  .shop-info__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

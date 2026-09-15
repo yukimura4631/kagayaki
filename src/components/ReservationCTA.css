@@ -1,0 +1,55 @@
+.reservation-cta {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 12px 20px 22px;
+  background: rgba(255, 250, 241, 0.96);
+  border-top: 1px solid rgba(44, 58, 80, 0.08);
+  box-shadow: 0 -12px 25px rgba(44, 58, 80, 0.08);
+}
+
+.reservation-cta__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.reservation-cta__text {
+  margin: 0;
+  font-weight: 700;
+}
+
+.reservation-cta__actions {
+  display: grid;
+  gap: 12px;
+}
+
+.button--ghost {
+  background: transparent;
+  border: 1px solid rgba(44, 58, 80, 0.12);
+  color: var(--nav);
+}
+
+.button--secondary {
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+@media (min-width: 800px) {
+  .reservation-cta {
+    position: static;
+    padding: 24px 0 0;
+    box-shadow: none;
+  }
+
+  .reservation-cta__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .reservation-cta__actions {
+    gap: 14px;
+    grid-auto-flow: column;
+  }
+}

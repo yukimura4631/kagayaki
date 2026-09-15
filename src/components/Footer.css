@@ -1,0 +1,23 @@
+.footer {
+  padding: 24px 0 40px;
+  color: #f8f3eb;
+  background: #1f334d;
+  border-radius: 28px;
+}
+
+.footer__copy {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.footer__copy p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer__copyright {
+  margin: 0;
+  color: rgba(248, 243, 235, 0.72);
+  font-size: 0.9rem;
+}

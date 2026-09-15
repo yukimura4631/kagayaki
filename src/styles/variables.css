@@ -1,0 +1,25 @@
+:root {
+  color-scheme: light;
+  font-family: 'Noto Sans JP', 'Yu Gothic UI', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #2c3a50;
+  background: #fffaf1;
+  --bg: #fffaf1;
+  --surface: #ffffff;
+  --surface-soft: #f8f5ef;
+  --text: #2c3a50;
+  --text-muted: #5d6f84;
+  --accent: #d9b263;
+  --accent-strong: #b88f3d;
+  --nav: #1d2f4b;
+  --border: rgba(44, 58, 80, 0.1);
+  --shadow: 0 18px 45px rgba(44, 58, 80, 0.08);
+  --radius: 30px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+}

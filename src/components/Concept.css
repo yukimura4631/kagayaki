@@ -1,0 +1,55 @@
+.section__intro {
+  margin-bottom: 24px;
+}
+
+.section__eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  color: var(--accent-strong);
+}
+
+.section__title {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.08;
+}
+
+.concept__body {
+  display: grid;
+  gap: 24px;
+}
+
+.concept__text {
+  display: grid;
+  gap: 18px;
+  color: var(--text-muted);
+}
+
+.concept__text p {
+  margin: 0;
+}
+
+.concept__photo {
+  position: relative;
+  min-height: 260px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #fff8f0 0%, #f4eee6 100%);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.concept__photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 20%, rgba(217, 178, 99, 0.22), transparent 24%),
+    radial-gradient(circle at 80% 15%, rgba(217, 178, 99, 0.16), transparent 20%);
+}
+
+@media (min-width: 900px) {
+  .concept__body {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
