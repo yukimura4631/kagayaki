@@ -25,14 +25,13 @@ export default function Header({ sections, activeSection, isOpen, onToggle, onNa
       </div>
       <nav id="site-nav" className={`header__nav ${isOpen ? 'header__nav--open' : ''}`} aria-label="サイト内ナビゲーション">
         {sections.map((item) => (
-          <button
-            key={item.id}
+          <a href={`#${item.id}`} key={item.id}
             className={`header__link ${activeSection === item.id ? 'active' : ''}`}
             onClick={() => onNavigate(item.id)}
-            type="button"
+            aria-current={activeSection === item.id ? "location" : undefined}
           >
             {item.label}
-          </button>
+          </a>
         ))}
       </nav>
     </header>

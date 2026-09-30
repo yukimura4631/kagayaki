@@ -14,7 +14,10 @@ export default function Concept() {
           <p>高額なコース契約や化粧品の押し売りは行いません。必要なのは、毎回の施術料金4,400円だけ。</p>
           <p>お客様一人ひとりのお肌と誠実に向き合い、自然な美しさと輝きを引き出します。</p>
         </div>
-        <img className="concept__photo" src="/assets/concept.png" alt="自分の頬にそっと触れる女性のイメージ" loading="lazy" width="1536" height="1024" />
+        <figure className="concept__owner">
+          <img className="concept__photo concept__photo--owner" src="/assets/owner-portrait-retouched.png" alt="Face Beauty かがやきのオーナーセラピスト" loading="lazy" width="1086" height="1448" />
+          <figcaption className="concept__owner-caption">オーナーセラピスト</figcaption>
+        </figure>
       </div>
     </section>
   );
