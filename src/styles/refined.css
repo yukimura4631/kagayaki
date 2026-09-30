@@ -54,5 +54,5 @@ p{overflow-wrap:anywhere}button,a{-webkit-tap-highlight-color:transparent}button
 
 .header__link{display:block}
 
-.concept__photo.concept__photo--owner{object-position:center 25%}
+.concept__photo.concept__photo--owner{height:auto;aspect-ratio:auto;object-fit:contain;object-position:center}
 .concept__owner{margin:0;min-width:0}.concept__owner .concept__photo{display:block}.concept__owner-caption{margin-top:14px;text-align:center;font-size:14px;letter-spacing:.12em;color:var(--text-muted);line-height:1.8}
